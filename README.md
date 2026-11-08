@@ -108,20 +108,3 @@ Precision, Recall and F1 are calculated for the positive class, malignant (1).
 - **Downloadable predictions** for the selected model.
 
 The app only loads the saved models from `model/`. It does not retrain anything on the uploaded data.
-
-## How to run
-
-```bash
-pip install -r requirements.txt
-python train_models.py      # optional: retrains and regenerates model/, test_data.csv, metrics
-streamlit run app.py
-```
-
-### Deploy on Streamlit Community Cloud
-
-1. Push this folder to a public GitHub repository.
-2. Go to https://streamlit.io/cloud and sign in with GitHub.
-3. Click **New app**, then select the repository, the branch (`main`) and the main file `app.py`.
-4. Under **Advanced settings**, choose Python 3.12 or later, then click **Deploy**.
-
-`scikit-learn` is pinned to 1.9.0 in `requirements.txt` so the cloud environment loads the saved `.pkl` models with the same version that trained them.
